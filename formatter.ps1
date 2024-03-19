@@ -12,7 +12,7 @@ Param (
 )
 
 [String[]] $content = Get-Content "$($file)"
-[String[]]$newContent = Get-Content "$($file)" | Select-Object -Skip 1 | Select-Object -SkipLast 1
+[String[]]$newContent = Get-Content "$($file)" | Where { $_ -notmatch "^\s*#|^\s*$" } | Select-Object -Skip 1 | Select-Object -SkipLast 1 
 
 $pattern = '\$\w+'
 $variables = [regex]::Matches($newContent -join "`n", $pattern) | ForEach-Object { $_.Value }

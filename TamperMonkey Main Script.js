@@ -1,11 +1,10 @@
 // ==UserScript==
-// @name CustomerName - Personalize
+// @name Sitecore CDP/P base script - {{SiteName}} 
 // @namespace http://tampermonkey.net/
 // @version 0.2
 // @description Generic Load Sitecore CDP Tampermonkey scripts
 // @author Sitecore Presales
-// @match https://*.url.com/*
-// @match https://*.dupliacte-for-each-site-you-want-this-to-run-on.com/*
+// @match https://*.yoursite.com/*
 // @grant  none
 // ==/UserScript==
 
@@ -20,10 +19,10 @@
     const AP_API_TARGET = "https://api-engage-ap.sitecorecloud.io";
 
     //Engage SDK settings
-    const ENGAGE_COOKIE_DOMAIN = getCookieDomain() // Get's the cookie domain from the URL
-    const ENGAGE_API_TARGET = US_API_TARGET; // Update target here
-    const ENGAGE_CLIENT_KEY = "ClientKeyHere";
-    const ENGAGE_POINT_OF_SALE = "StandardDemo";
+    const ENGAGE_COOKIE_DOMAIN = getCookieDomain() // Gets the cookie domain from the URL
+    const ENGAGE_API_TARGET = US_API_TARGET; 
+    const ENGAGE_CLIENT_KEY = "{{clientkey}}";
+    const ENGAGE_POINT_OF_SALE = "{{PointOfSale}}";
 
     const CURRENCY = "AUD";
     const CHANNEL = "WEB"

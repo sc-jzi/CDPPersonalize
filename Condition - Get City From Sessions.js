@@ -1,3 +1,5 @@
+// Set the 'Output' field of your condition to: The visitor [[is]] in [[city]] during the current visit 
+
 (function () {
     var visited = "[[is | enum(is, is not) | is | { required: true, values: [is, is not] }]]";
     var city = "[[city | string || {required: true, placeholder: city }]]";
